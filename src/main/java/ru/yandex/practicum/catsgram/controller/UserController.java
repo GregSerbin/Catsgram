@@ -64,6 +64,7 @@ public class UserController {
             if (newUser.getPassword() != null) {
                 oldUser.setPassword(newUser.getPassword());
             }
+            return oldUser;
         }
 
         throw new NotFoundException("Пользователь с id = " + newUser.getId() + " не найден");
